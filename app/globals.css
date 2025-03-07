@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+
+/* Transitions for dark mode */
+.dark {
+  color-scheme: dark;
+}
+
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* LeetCode-inspired theme colors */
+:root {
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --success-color: #22c55e;
+  --warning-color: #eab308;
+  --danger-color: #ef4444;
+  --background-light: #ffffff;
+  --foreground-light: #1e293b;
+  --background-dark: #0f172a;
+  --foreground-dark: #e2e8f0;
+}
+
+.dark {
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+}
+
+/* LeetCode-inspired card styling */
+.card-hover-effect {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark .card-hover-effect:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
